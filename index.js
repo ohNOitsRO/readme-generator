@@ -110,25 +110,10 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
-const writeToFile = data => {
-    return new Promise((resolve, reject) => {
-        // make a readme file and add to dist folder
-        fs.writeFile('./dist/README.md', data, err => {
-            // if there's an error, reject the Promise and send the error to .catch() method
-            if (err) {
-                reject (err);
-                // return out of the function here to make sure the Promise doesn't continut to execute the resolve() function
-                return;
-            }
-            // if everything went well, resolve the Promise and send the successful data to the .then() method
-            resolve({
-                ok: true,
-                message: console.log('Success! Your README has been created!')
-            });
-        })
-    })
+function writeToFile("README.md", data) {
+    fs.appendFile(`$README.md`, data, 
+    (err) => err ? console.error(err) : console.log(`${fileName}.md has been generated.`))
 }
-
 
 
 
