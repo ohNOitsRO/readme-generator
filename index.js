@@ -4,7 +4,8 @@ const fs = require('fs');
 
 
 // TODO: Create an array of questions for user input
-const questions = [
+function userInput(){
+    return inquirer.prompt([
     {
         type: 'input',
         name: 'project',
@@ -94,7 +95,7 @@ const questions = [
         type: 'list',
         name: 'licenses',
         message: 'What license would you like to include?',
-        choices: ['MIT', 'GPL', 'CC--0'],
+        choices: ["Apache license 2.0", "Boost Software License 1.0", "BSD 2-clause license", "BSD 3-clause license", "Creative Commons Zero v1.0 Universal","Eclipse Public License 2.0","GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU General Public License v3.0",  "GNU Lesser General Public License v2.1","MIT", "Mozilla Public License 2.0", "The Unlicense"],
         when: ({confirmLicenses}) => {
             if (confirmLicenses) {
                 return true;
@@ -103,26 +104,29 @@ const questions = [
             }
         }
     },
-];
+]);
+};
 
 
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
-function writeToFile("README.md", data) {
-    fs.appendFile(`$README.md`, data, 
+function writeToFile(fileName, data) {
+    fs.appendFile(`${fileName}.md`, data, 
     (err) => err ? console.error(err) : console.log(`${fileName}.md has been generated.`))
 }
 
 
 
 
-
-
-
 // TODO: Create a function to initialize app
 function init() {}
+
+function init() {
+    let answers = userInput();
+    writeToFile((answers.fileName),(generateMarkdown(answers)));
+}
 
 // Function call to initialize app
 init();
