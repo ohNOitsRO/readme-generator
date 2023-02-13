@@ -84,6 +84,32 @@ function userInput(){
             }
         }
     },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please provide your email:',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please provide a valid email so users can reach out to you!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Provide provide your gitHub user link:',
+        validate: testsInput => {
+            if (testsInput) {
+                return true;
+            } else {
+                console.log('Please provide a valid gitHub URL so users can keep up with your latest projects!');
+                return false;
+            }
+        }
+    },
 
     {
         type: 'confirm',
