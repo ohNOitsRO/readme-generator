@@ -2,7 +2,8 @@
 // If there is no license, return an empty string
 
 const licenseArr = ["Apache license 2.0", "Boost Software License 1.0", "BSD 2-clause license", "BSD 3-clause license", "Creative Commons Zero v1.0 Universal","Eclipse Public License 2.0","GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU General Public License v3.0",  "GNU Lesser General Public License v2.1","MIT", "Mozilla Public License 2.0", "The Unlicense"]
-function renderLicenseBadge(licenseArr){
+
+function renderLicenseBadge(license){
   switch (licenseArr){
     case "Apache license 2.0":
       return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)]";
@@ -83,7 +84,7 @@ function renderLicenseBadge(licenseArr){
 // }
 
 
-function renderLicenseLink(licenseArr){
+function renderLicenseLink(license){
 switch (licenseArr){
   case licenseArr[0]:
     return `[${licenseArr[0]}](https://opensource.org/licenses/Apache-2.0)`;
@@ -184,7 +185,7 @@ switch (licenseArr){
 
 
 
-function renderLicenseSection(licenseArr) {
+function renderLicenseSection(license) {
 switch (licenseArr){
   case licenseArr[0]:
     return `Read more about ${licenseArr[0]} here:`;
@@ -306,7 +307,6 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ## How to Contribute
-  [Contributor Covenant](https://www.contributor-covenant.org/)  
   ${data.contributing}
   ## Tests
   ${data.testing}
