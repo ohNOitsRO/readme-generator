@@ -1,9 +1,11 @@
 // TODO: Include packages needed for this application
+
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
+
 function userInput(){
     return inquirer.prompt([
     {
@@ -15,6 +17,19 @@ function userInput(){
                 return true;
             } else {
                 console.log('Please enter a title for your project!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'filename',
+        message: 'What do you wanna call the readme file?',
+        validate: filenameInput => {
+            if (filenameInput) {
+                return true;
+            } else {
+                console.log('Please enter a title for your readme file!');
                 return false;
             }
         }
@@ -110,7 +125,6 @@ function userInput(){
             }
         }
     },
-
     {
         type: 'confirm',
         name: 'confirmLicenses',
@@ -119,7 +133,7 @@ function userInput(){
     },
     {
         type: 'list',
-        name: 'licenses',
+        name: 'license',
         message: 'What license would you like to include?',
         choices: ["Apache license 2.0", "Boost Software License 1.0", "BSD 2-clause license", "BSD 3-clause license", "Creative Commons Zero v1.0 Universal","Eclipse Public License 2.0","GNU Affero General Public License v3.0", "GNU General Public License v2.0", "GNU General Public License v3.0",  "GNU Lesser General Public License v2.1","MIT", "Mozilla Public License 2.0", "The Unlicense"],
         when: ({confirmLicenses}) => {
@@ -136,23 +150,20 @@ function userInput(){
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-function writeToFile(fileName, data) {
-    fs.appendFile(`${fileName}.md`, data, 
-    (err) => err ? console.error(err) : console.log(`${fileName}.md has been generated.`))
+function writeToFile(filename, data) {
+    fs.appendFile(`${filename}.md`, data, 
+    (err) => err ? console.error(err) : console.log(`${filename}.md has been generated.`))
 }
-
-
 
 
 // TODO: Create a function to initialize app
-function init() {}
 
-function init() {
-    let answers = userInput();
-    writeToFile((answers.fileName),(generateMarkdown(answers)));
+async function init() {
+    let answers = await userInput();
+    writeToFile((answers.filename),(generateMarkdown(answers)));
 }
 
 // Function call to initialize app
+
 init();
