@@ -5,43 +5,43 @@ const licenseArr = ["Apache license 2.0", "Boost Software License 1.0", "BSD 2-c
 
 function renderLicenseBadge(license) {
   if (license === licenseArr[0]){
-    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)"
   } 
   else if (license === licenseArr[1]){
-    return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+    return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://choosealicense.com/licenses/bsl-1.0/)"
   } 
   else if (license === licenseArr[2]){
-    return "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)"
+    return "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://choosealicense.com/licenses/bsd-2-clause/)"
   } 
   else if (license === licenseArr[3]){
-    return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://choosealicense.com/licenses/bsd-3-clause/)"
   } 
   else if (license === licenseArr[4]){
-    return "[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)"
+    return "[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://choosealicense.com/licenses/cc0-1.0/)"
   } 
   else if (license === licenseArr[5]){
-    return "[![License](https://img.shields.io/badge/License-EPL%202.0-red.svg)](https://opensource.org/licenses/EPL-2.0)"
+    return "[![License](https://img.shields.io/badge/License-EPL%202.0-red.svg)](https://choosealicense.com/licenses/epl-2.0/)"
   } 
   else if (license === licenseArr[6]){
-    return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)"
+    return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://choosealicense.com/licenses/agpl-3.0/)"
   } 
   else if (license === licenseArr[7]){
-    return "[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)"
+    return "[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://choosealicense.com/licenses/gpl-2.0/)"
   } 
   else if (license === licenseArr[8]){
-    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://choosealicense.com/licenses/gpl-3.0/)"
   } 
   else if (license === licenseArr[9]){
-    return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg)](https://www.gnu.org/licenses/lgpl-2.1)"
+    return "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v2.1-blue.svg)](https://choosealicense.com/licenses/lgpl-3.0/)"
   } 
   else if (license === licenseArr[10]){
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)"
   } 
   else if (license === licenseArr[11]){
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://choosealicense.com/licenses/mpl-2.0/)"
   } 
   else if (license === licenseArr[12]){
-    return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+    return "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://choosealicense.com/licenses/unlicense/)"
   } 
   else {
     return ""
@@ -53,43 +53,43 @@ function renderLicenseBadge(license) {
 
 function renderLicenseLink(license) {
   if (license === licenseArr[0]){
-    return `[${licenseArr[0]}](https://opensource.org/licenses/Apache-2.0)`
+    return `[${licenseArr[0]}](https://choosealicense.com/licenses/apache-2.0/)`
   } 
   else if (license === licenseArr[1]){
-    return `[${licenseArr[1]}](https://www.boost.org/LICENSE_1_0.txt)`
+    return `[${licenseArr[1]}](https://choosealicense.com/licenses/bsl-1.0/)`
   } 
   else if (license === licenseArr[2]){
-    return `[${licenseArr[2]}](https://opensource.org/licenses/BSD-2-Clause)`
+    return `[${licenseArr[2]}](https://choosealicense.com/licenses/bsd-2-clause/)`
   } 
   else if (license === licenseArr[3]){
-    return `[${licenseArr[3]}](https://opensource.org/licenses/BSD-3-Clause)`
+    return `[${licenseArr[3]}](https://choosealicense.com/licenses/bsd-3-clause/)`
   } 
   else if (license === licenseArr[4]){
-    return `[${licenseArr[4]}](http://creativecommons.org/publicdomain/zero/1.0/)`
+    return `[${licenseArr[4]}](https://choosealicense.com/licenses/cc0-1.0/)`
   } 
   else if (license === licenseArr[5]){
-    return `[${licenseArr[5]}](https://opensource.org/licenses/EPL-2.0)`
+    return `[${licenseArr[5]}](https://choosealicense.com/licenses/epl-2.0/)`
   } 
   else if (license === licenseArr[6]){
-    return `[${licenseArr[6]}](https://www.gnu.org/licenses/agpl-3.0)`
+    return `[${licenseArr[6]}](https://choosealicense.com/licenses/agpl-3.0/)`
   } 
   else if (license === licenseArr[7]){
-    return `[${licenseArr[7]}](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)`
+    return `[${licenseArr[7]}](https://choosealicense.com/licenses/gpl-2.0/)`
   } 
   else if (license === licenseArr[8]){
-    return `[${licenseArr[8]}](https://www.gnu.org/licenses/gpl-3.0)`
+    return `[${licenseArr[8]}](https://choosealicense.com/licenses/gpl-3.0/)`
   } 
   else if (license === licenseArr[9]){
-    return `[${licenseArr[9]}](https://www.gnu.org/licenses/lgpl-2.1)`
+    return `[${licenseArr[9]}](https://choosealicense.com/licenses/lgpl-3.0/)`
   } 
   else if (license === licenseArr[10]){
-    return `[${licenseArr[10]}](https://opensource.org/licenses/MIT)`
+    return `[${licenseArr[10]}](https://choosealicense.com/licenses/mit/)`
   } 
   else if (license === licenseArr[11]){
-    return `[${licenseArr[11]}](https://opensource.org/licenses/MPL-2.0)`
+    return `[${licenseArr[11]}](https://choosealicense.com/licenses/mpl-2.0/)`
   } 
   else if (license === licenseArr[12]){
-    return `[${licenseArr[12]}](http://unlicense.org/)`
+    return `[${licenseArr[12]}](https://choosealicense.com/licenses/unlicense/)`
   } 
   else {
     return ""
